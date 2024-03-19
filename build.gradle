@@ -6,6 +6,7 @@ plugins {
 
 group = 'com.polarbookshop'
 version = '0.0.1-SNAPSHOT'
+description = 'Provides functionality for dispatching orders.'
 
 java {
 	sourceCompatibility = '17'
@@ -21,6 +22,8 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-stream-binder-rabbit'
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation 'org.springframework.retry:spring-retry'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'

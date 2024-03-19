@@ -1,13 +1,13 @@
 package com.polarbookshop.dispatcherservice;
-import java.util.function.Function;
 
 import org.junit.jupiter.api.Test;
-import reactor.core.publisher.Flux;
-import reactor.test.StepVerifier;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.function.context.FunctionCatalog;
 import org.springframework.cloud.function.context.test.FunctionalSpringBootTest;
+import reactor.core.publisher.Flux;
+import reactor.test.StepVerifier;
+
+import java.util.function.Function;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -46,5 +46,4 @@ class DispatchingFunctionsIntegrationTests {
                         dispatchedOrder.equals(new OrderDispatchedMessage(orderId)))
                 .verifyComplete();
     }
-
 }
